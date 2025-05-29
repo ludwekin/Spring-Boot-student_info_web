@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息管理系统</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>用户信息列表</h2>
+        <div class="mb-3">
+            <a href="/student/add" class="btn btn-primary">添加用户</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>兴趣爱好</th>
+                    <th>朋友</th>
+                    <th>职业</th>
+                    <th>户籍</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student : ${students}">
+                    <td th:text="${student.username}"></td>
+                    <td th:text="${student.hobby}"></td>
+                    <td th:text="${student.friends}"></td>
+                    <td th:text="${student.occupation}"></td>
+                    <td th:text="${student.hometown}"></td>
+                    <td>
+                        <a th:href="@{/student/edit/{id}(id=${student.id})}" class="btn btn-sm btn-warning">编辑</a>
+                        <a th:href="@{/student/delete/{id}(id=${student.id})}" class="btn btn-sm btn-danger" 
+                           onclick="return confirm('确定要删除吗？')">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

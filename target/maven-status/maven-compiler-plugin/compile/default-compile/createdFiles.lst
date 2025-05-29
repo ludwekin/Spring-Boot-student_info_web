@@ -1,0 +1,6 @@
+com/example/student/mapper/StudentTableMapper.class
+com/example/student/service/impl/StudentTableServiceImpl.class
+com/example/student/StudentApplication.class
+com/example/student/entity/StudentTable.class
+com/example/student/controller/StudentTableController.class
+com/example/student/service/StudentTableService.class

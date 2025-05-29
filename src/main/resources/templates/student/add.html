@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>添加用户信息</h2>
+        <form th:action="@{/student/add}" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">用户名</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="hobby" class="form-label">兴趣爱好</label>
+                <input type="text" class="form-control" id="hobby" name="hobby">
+            </div>
+            <div class="mb-3">
+                <label for="friends" class="form-label">朋友</label>
+                <input type="text" class="form-control" id="friends" name="friends">
+            </div>
+            <div class="mb-3">
+                <label for="occupation" class="form-label">职业</label>
+                <input type="text" class="form-control" id="occupation" name="occupation">
+            </div>
+            <div class="mb-3">
+                <label for="hometown" class="form-label">户籍</label>
+                <input type="text" class="form-control" id="hometown" name="hometown">
+            </div>
+            <button type="submit" class="btn btn-primary">保存</button>
+            <a href="/student/list" class="btn btn-secondary">返回</a>
+        </form>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
